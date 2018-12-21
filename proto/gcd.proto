@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package pb;
+
+message GCDRequest {
+  required uint64 a = 1;
+  required uint64 b = 2;
+}
+
+message GCDResponse {
+  required uint64 result = 1;
+}
+
+service GCDService {
+  rpc Compute (GCDRequest) returns (GCDResponse) {}
+}
